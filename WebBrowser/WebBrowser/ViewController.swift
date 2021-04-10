@@ -15,7 +15,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
     }
     
     func loadUrl() {
-        guard let url: URL = URL(string: "https://yagom.net") else { return }
+        guard let url: URL = URL(string: "https://www.google.com") else { return }
         let request: URLRequest = URLRequest(url: url)
         
         webView.navigationDelegate = self
@@ -69,6 +69,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
     func verifyUrl(_ unidentifiedUrl: String) -> String {
         var identifyUrl = unidentifiedUrl.lowercased()
         if !(identifyUrl.hasPrefix("http://") || identifyUrl.hasPrefix("https://")) {
+            showAlertMessage()
             identifyUrl = autoChangeUrl(identifyUrl)
         }
         return identifyUrl
@@ -79,12 +80,10 @@ class ViewController: UIViewController, WKNavigationDelegate {
         return autoChangedUrl
     }
 
-    /*
     func showAlertMessage() {
         let alert = UIAlertController(title: nil, message: "입력한 주소가 올바른 형태가 아닙니다.", preferredStyle: UIAlertController.Style.alert)
         let okAction = UIAlertAction(title: "확인", style: .cancel, handler : nil)
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
     }
-    */
 }
