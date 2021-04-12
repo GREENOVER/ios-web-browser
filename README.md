@@ -1,7 +1,8 @@
 # iOS Web Browser Application
 ### 웹 브라우저를 앱으로 구현한 프로젝트
+[Ground Rule](https://github.com/GREENOVER/ios-web-browser/blob/main/GroundRule.md)
 ***
-#### What have I done?
+#### What I learned✍️
 - UIKit
 - WebKit
 - UIBarButtonItem
@@ -13,7 +14,7 @@
 - touch
 - Alert
 
-#### What I learned
+#### What have I done🧑🏻‍💻
 - 로딩화면에서 인디케이터를 구현해보았다.
 - String 입력을 통한 URL로의 convert를 구현해보았다.
 - StoryBoard에서 적절한 UI 요소들을 배치하고 레이아웃 제약을 걸어보았다.
