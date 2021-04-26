@@ -69,12 +69,13 @@
     - 모호한 오토레이아웃이 적용되어 사이즈나 간격의 마진등이 누락된 부분이 있어 시뮬레이터를 각기 다른 기기로 구동 시킬때마다 각 시뮬레이터의 사이즈가 달라지게 됨으로 한쪽으로 치우치거나 스토리보드에서 배치한 UI로 보이지 않게 되는것이다. 즉 오토레이아웃을 적용하긴 했으나 어느 부분들이 아직 완벽하게 적용되지 않은 미비한 상태이다.
   - 해결방안
     - 우선 스토리보드에서 일일히 오토레이아웃을 확인하는것보다 LLDB 디버깅을 이용하여 모호한 오토레이아웃을 아래와 같이 탐색하였다.      
-    <img width="300" alt="스크린샷 2021-04-26 오전 10 24 34" src="https://user-images.githubusercontent.com/72292617/116017091-9a01e080-a679-11eb-83bf-c32f61e2236f.png">   
+    <img width="600" alt="스크린샷 2021-04-26 오전 10 24 34" src="https://user-images.githubusercontent.com/72292617/116017091-9a01e080-a679-11eb-83bf-c32f61e2236f.png">   
    
-    <img width="300" alt="스크린샷 2021-04-26 오전 10 25 17" src="https://user-images.githubusercontent.com/72292617/116017131-b30a9180-a679-11eb-9fb3-43395c22fa41.png">   
+    <img width="600" alt="스크린샷 2021-04-26 오전 10 25 17" src="https://user-images.githubusercontent.com/72292617/116017131-b30a9180-a679-11eb-9fb3-43395c22fa41.png">      
+    
     Chisel LLDB 오픈소스 라이브러리의 명령어인 paltrace를 이용하였다. 해당 명령어는 서브뷰의 하이라키(계층구조)를 출력해준다. (오토레이아웃이 잘못되어 있으면 Ambiguous Layouts라고 뜨는걸 볼 수 있음) 위와 같이 참 많이도 AMBIGUOUS라고 모호하다는 표현이 참 많이 나온다... 그만큼 모호한 오토레이아웃이 많다는 의미이다. 해당 부분들에 대해 아래와 같이 쉽게 볼 수 있도록 보더색을 만들어주었다.   
    
-    <img width="300" alt="스크린샷 2021-04-26 오전 10 29 58" src="https://user-images.githubusercontent.com/72292617/116017366-5b205a80-a67a-11eb-94e6-5bed4e4e72f0.png">      
+    <img width="600" alt="스크린샷 2021-04-26 오전 10 29 58" src="https://user-images.githubusercontent.com/72292617/116017366-5b205a80-a67a-11eb-94e6-5bed4e4e72f0.png">      
 
     <img width="1270" alt="스크린샷 2021-04-26 오전 10 30 09" src="https://user-images.githubusercontent.com/72292617/116017381-64a9c280-a67a-11eb-914d-189e5818c603.png">   
 
