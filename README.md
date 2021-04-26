@@ -42,7 +42,7 @@
           loadIndicator.stopAnimating()
       }
      ```
-     WebView에 원하는 웹이 로드가 끝나면 인디케이터 애니메이션이 종료될 수 있게 구현하였다.
+     WebView에 원하는 웹이 로드가 끝나면 인디케이터 애니메이션이 종료될 수 있게 구현하였다.   
      ![TS_1](https://user-images.githubusercontent.com/72292617/116015703-2c53b580-a675-11eb-995f-87e121389c4d.gif)
  - 문제점 (2)
    - URL 입력값이 http://나 https://가 붙지 않았을 경우나 올바르지 않은 URL을 입력했을때 검증할 수가 없어 사용자 입장에서 앱이 제대로 동작하지 않는것처럼 나타나게된다.
